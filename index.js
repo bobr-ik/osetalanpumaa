@@ -186,7 +186,7 @@ function init(){
       url: 'https://api.maptiler.com/maps/openstreetmap/tiles.json?key=Wco4p5rChNXXJw3pJDwO',
       tileSize: 512
     }),
-    opacity: 0
+    opacity: 1
   });
   
   var layer2 = new ol.layer.Tile({
