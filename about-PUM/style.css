@@ -1,0 +1,297 @@
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+@font-face {
+    font-family: 'Yandex_sans';
+    src: url(../fonts/YandexSansText-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Yandex_italic';
+    src: url(../fonts/YandexSansText-RegularItalic.ttf);
+}
+
+/* Жирный */
+@font-face {
+    font-family: 'Yandex bold';
+    src: url(../fonts/YandexSansText-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Medium';
+    src: url(../fonts/YandexSansText-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Dela';
+    src: url(../fonts/Dela.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Yandex_sans";
+    font-size: 20px;
+
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-right: 1.3rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: white;
+    backdrop-filter: blur(50px);
+    z-index: -1;
+}
+
+.logo {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 81.6px;
+    margin: 0px;
+}
+
+.navbar button {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    position: relative;
+    font-size: 1rem;
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 2.5rem;
+
+}
+
+.navbar button::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: .3s;
+}
+
+.navbar button:hover::before {
+    width: 100%;
+}
+
+#check {
+    display: none;
+}
+
+.icons {
+    position: absolute;
+    right: 5%;
+    font-size: 2.2rem;
+
+    color: black;
+    cursor: pointer;
+    display: none;
+}
+
+.section_title{
+    font-family: 'Medium'; 
+    font-size: 1.3rem;
+    margin: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.about-PUM{
+    text-align: center;
+    margin: 3%;
+}
+
+.circle {
+    background-image:url(../image/Ellipse\ 1.svg); 
+    width:29px; 
+    height:29px; 
+    text-align: center;
+    margin-bottom: 3px;
+    display:inline-block;
+    vertical-align:bottom;
+}
+
+#main-content{
+    margin: 5%;
+}
+
+.quote-div{
+    margin:5%;
+}
+
+
+.quotation-mark{
+    font-size: 5rem;
+    font-family: 'Dela';
+    color: #0077ff;
+}
+
+.quote{
+    position: relative;
+    text-align: center;
+    max-width: 55vw;
+    line-height: 150%;
+
+    &::before{
+        content: '“';
+        font-size: 5rem;
+        font-family: 'Dela';
+        color: #0077ff;
+        position: absolute;
+        transform: translate(-3rem, -1rem);
+    }
+
+    &::after{
+        content: '”';
+        font-size: 5rem;
+        font-family: 'Dela';
+        color: #0077ff;
+        position: absolute;
+        transform: translate(1rem, 1.5rem);
+    }
+}
+
+.right{
+    display: flex;
+    justify-content: right;
+}
+
+#bg-fig-1{
+    max-width: 40vw;
+    max-height: 40vh;
+    position:absolute;
+    top:10vh;
+    right: 0vw;
+    z-index: -1;
+}
+#bg-fig-2{
+    max-width: 60vw;
+    max-height: 60vh;
+    position:absolute;
+    top:70vh;
+    left: -5vw;
+    z-index: -1;
+}
+
+#bg-fig-4{
+    max-width: 20vw;
+    max-height: 20vh;
+    position:absolute;
+    top:13vh;
+    left: 15vw;
+    z-index: -1;
+}
+
+
+
+@media (max-width: 1280px){
+    .icons{
+      display:inline-flex;
+    }
+    
+    #check:checked~.icons #menu-icon {
+      display: none;
+    }
+    
+    .icons #close-icon {
+      display: none;
+    }
+    
+    #check:checked~.icons #close-icon {
+      display: block;
+    }
+    
+    
+    .navbar{
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background: rgba(0,0,0, .1);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 0.5rem 1rem rgba(0,0,0, .1);
+      overflow: hidden;
+      transition: .3s ease;
+    }
+    
+    #check:checked~.navbar{
+      height: 17.7rem;
+    }
+    
+    .navbar button {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        width:100%;
+      display: block;
+      font-size: 0.9rem;
+      margin: 2.0rem 0;
+      text-align: center;
+      color: white;
+      transform: translateY(-50px);
+      transition: .3s ease;
+    }
+    #check:checked~.navbar button{
+      transform: translateY(0px);
+    }
+}
+
+@media (max-width: 768px) {
+    .quote-div{
+        margin-bottom:20%;
+    }
+
+    .quote{
+        max-width: 100%;
+    }
+
+    #bg-fig-1{
+        max-width: 40vw;
+        max-height: 40vh;
+        top:20vh;
+        left: -25vw;
+        right: auto;
+    }
+    #bg-fig-2{
+        max-width: 60vw;
+        max-height: 60vh;
+        top:85vh;
+        left: -35vw;
+    }
+    
+    #bg-fig-4{
+        max-width: 20vw;
+        max-height: 20vh;
+        top:13vh;
+        left:auto;
+        right: 0vw;
+        
+    }
+}
