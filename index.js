@@ -264,7 +264,7 @@ map.on('click', function (evt) {
         return feature;
       }
       if (layer == marker2) {
-        content.innerHTML = '2. Луг в Моздокском районе';
+        content.innerHTML = '2. Степь в Моздокском районе';
         document.getElementById('accept-point-button').pointName = 'second-point'
         return feature;
       }
