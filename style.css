@@ -6,6 +6,7 @@
 html {
   overflow-y:scroll;
   overflow-x: hidden;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 
@@ -291,8 +292,10 @@ margin-bottom: 3px;
 }
 
 
-
-
+span.name {
+  cursor: pointer; 
+  margin:0
+}
 
 
 
@@ -1767,6 +1770,11 @@ ul{
   
   .name{
     font-size: 2rem;
+
+    .span-items{
+      display: block;
+    }
+    
   }
   .name-point-opened{
     font-size: 2rem;
