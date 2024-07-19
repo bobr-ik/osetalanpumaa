@@ -157,7 +157,7 @@ html {
 .quote{
     position: relative;
     text-align: center;
-    max-width: 55vw;
+    max-width: 40vw;
     line-height: 150%;
 
     &::before{
@@ -188,7 +188,7 @@ html {
     max-width: 40vw;
     max-height: 40vh;
     position:absolute;
-    top:10vh;
+    top:100px;
     right: 0vw;
     z-index: -1;
 }
@@ -196,8 +196,17 @@ html {
     max-width: 60vw;
     max-height: 60vh;
     position:absolute;
-    top:70vh;
-    left: -5vw;
+    top:670px;
+    left: -190px;
+    z-index: -1;
+}
+
+#bg-fig-3{
+    max-width: 200px;
+    max-height: 200px;
+    position:absolute;
+    top:1100px;
+    right: 300px;
     z-index: -1;
 }
 
@@ -273,11 +282,11 @@ html {
     }
 
     #bg-fig-1{
-        max-width: 40vw;
-        max-height: 40vh;
-        top:20vh;
-        left: -25vw;
+        max-width: 200px;
+        max-height: 200px;
+        top:1150px;
         right: auto;
+        left: 50px;
     }
     #bg-fig-2{
         max-width: 60vw;
@@ -293,5 +302,13 @@ html {
         left:auto;
         right: 0vw;
         
+    }
+
+    #bg-fig-3{
+        max-width: 200px;
+        max-height: 200px;
+        top:1600px;
+        right: auto;
+        left: -50px;
     }
 }
