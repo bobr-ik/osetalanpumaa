@@ -47,7 +47,15 @@ function aspect_move(elem, elemNum) {
     }
 }
 
-
+function temp_point_open(point_name){
+    
+    for (i = 0; i < 8; i++) {
+        document.getElementsByClassName('info')[i].style.display = 'none';
+    }
+    point = point_name
+    document.getElementById(point).style.display = 'block';
+    document.querySelectorAll('#' + point + ' > .main-info > .point-photo')[0].scrollIntoView({ block: 'center', behavior: 'smooth' });
+}
 
 function showAspects() {
     for (i = 0; i < 8; i++) {
