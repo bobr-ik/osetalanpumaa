@@ -1189,7 +1189,7 @@ ul{
   /* background-color:#0077ff; */
   /* border-radius: 30px; */
   a{
-    text-decoration: none;
+    text-decoration: underline;
     color:#ffffff
   }
 }
@@ -1297,7 +1297,6 @@ ul{
     grid-row: 4 !important;
     grid-column-start: 1 !important;
     grid-column-end: 3 !important;
-    color: #0077ff;
   }
 
   .special3{
