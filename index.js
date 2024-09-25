@@ -43,6 +43,22 @@ function init(){
       })
     })
   })
+
+  const polyLayer2 = new ol.layer.Vector({
+    source: new ol.source.Vector({
+      url: 'https://api.maptiler.com/data/38914ad1-0aae-4e73-9d30-8810193d181c/features.json?key=Wco4p5rChNXXJw3pJDwO',
+      format: new ol.format.GeoJSON(),
+    }),
+    style: new ol.style.Style({
+      fill: new ol.style.Fill({
+        color: 'rgba(0, 119, 255, 0)'
+      }),
+      stroke: new ol.style.Stroke({
+        color: 'rgba(0, 119, 255)',
+        width: 4
+      })
+    })
+  })
   
   
   const marker1 = new ol.layer.Vector({
@@ -239,6 +255,7 @@ map.addLayer(layer1)
 map.addLayer(layer2)
 map.addLayer(layer3)
 map.addLayer(polyLayer)
+map.addLayer(polyLayer2)
 map.addLayer(marker1)
 map.addLayer(marker2)
 map.addLayer(marker3)
