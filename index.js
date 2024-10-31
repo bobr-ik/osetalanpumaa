@@ -273,7 +273,9 @@ map.on('click', function (evt) {
         document.getElementById('accept-point-button').style.display = 'none'
         return feature;
       }else{
-        document.getElementById('accept-point-button').style.display = 'inline-block'
+        if(layer != polyLayer2){
+          document.getElementById('accept-point-button').style.display = 'inline-block'
+        }
       }
       if (layer == marker1) {
         content.innerHTML = '1. Нижнее течение реки Терек';
